@@ -52,6 +52,27 @@
     button {
       margin-right: 5px;
     }
+    #ui-log-panel {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      max-height: 30vh;
+      overflow: auto;
+      background: #222;
+      color: #fff;
+      font-family: monospace;
+      font-size: 12px;
+      z-index: 9999;
+      padding: 5px;
+      box-sizing: border-box;
+      opacity: 0.95;
+    }
+    #ui-log-panel div {
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-bottom: 2px;
+    }
   </style>
 </head>
 <body>
@@ -96,10 +117,15 @@
       <p>Disk: <span id="disk-usage">--</span></p>
     </div>
 
-    <div class="freq-section">
-      <h3>Topic Frequencies</h3>
-      <pre id="topic-freqs">Waiting...</pre>
-    </div>
+   <div class="freq-section">
+  <h3>Topic Frequencies</h3>
+  <label>
+    <input type="checkbox" id="freq-monitor-toggle" checked>
+    Enable Frequency Monitoring
+  </label>
+  <pre id="topic-freqs">Waiting...</pre>
+</div>
+
   </div>
 
   <div id="right-panel">
@@ -121,9 +147,39 @@
     </div>
   </div>
 
+  <div id="ui-log-panel"></div>
+
 <script>
+  // On-page logging system
+  function uiLog(...args) {
+    const panel = document.getElementById('ui-log-panel');
+    const msg = args.map(a =>
+      typeof a === 'object' ? JSON.stringify(a, null, 2) : a
+    ).join(' ');
+    panel.innerHTML += `<div>${msg}</div>`;
+    panel.scrollTop = panel.scrollHeight;
+    if (typeof console !== "undefined" && console.log) {
+      console.log(...args);
+    }
+  }
+
+  window.onerror = function(message, url, line, column, error) {
+    uiLog("JS ERROR:", message, "at", url + ":" + line + ":" + column, error);
+  };
+  window.onunhandledrejection = function(event) {
+    uiLog("UNHANDLED PROMISE REJECTION:", event.reason);
+  };
+  ["click", "change", "input"].forEach(type => {
+    window.addEventListener(type, function(e) {
+      uiLog(`[EVENT] ${type} on`, e.target.id || e.target.className || e.target.tagName);
+    }, true);
+  });
+
+  // --- ROSBRIDGE: for topics and system status ---
   const ros = new ROSLIB.Ros({ url: 'ws://localhost:9090' });
-  ros.on('connection', () => console.log('✅ Connected to rosbridge'));
+  ros.on('connection', () => uiLog('✅ Connected to rosbridge'));
+  ros.on('error', err => uiLog('❌ ROS connection error:', err));
+  ros.on('close', () => uiLog('❌ ROS connection closed'));
 
   const viewers = [1, 2, 3];
   const imgTags = ["viewer1", "viewer2", "viewer3"];
@@ -139,6 +195,7 @@
     const topic = document.getElementById(`topic${i}`).value;
     const img = document.getElementById(`viewer${i}`);
     img.src = enabled && topic ? `http://localhost:8080/stream?topic=${topic}` : "";
+    uiLog(`[updateViewer] viewer${i}: enabled=${enabled}, topic=${topic}, img.src=${img.src}`);
   }
 
   function fetchImageTopics() {
@@ -155,120 +212,13 @@
         });
         updateViewer(i);
       });
+      uiLog("[fetchImageTopics] Found image topics:", imageTopics);
     });
   }
 
   fetchImageTopics();
 
-  // Build the correct ROS2 parameter value structure
-  function buildParameterValue(type, value) {
-    if (type === 'string') {
-      return {
-        type: 3, // string
-        bool_value: false,
-        integer_value: 0,
-        double_value: 0.0,
-        string_value: value,
-        byte_array_value: [],
-        bool_array_value: [],
-        integer_array_value: [],
-        double_array_value: [],
-        string_array_value: []
-      };
-    } else if (type === 'integer') {
-      return {
-        type: 2, // integer
-        bool_value: false,
-        integer_value: parseInt(value),
-        double_value: 0.0,
-        string_value: "",
-        byte_array_value: [],
-        bool_array_value: [],
-        integer_array_value: [],
-        double_array_value: [],
-        string_array_value: []
-      };
-    }
-  }
-
-  function setCameraParam(camIndex, paramName, value, type = 'string') {
-    const service = new ROSLIB.Service({
-      ros: ros,
-      name: '/multi_camera_parallel_node/set_parameters',
-      serviceType: 'rcl_interfaces/srv/SetParameters'
-    });
-
-    const request = new ROSLIB.ServiceRequest({
-      parameters: [{
-        name: `camera_${camIndex}.${paramName}`,
-        value: buildParameterValue(type, value)
-      }]
-    });
-
-    service.callService(request, result => {
-      console.log(`📡 Sent ${paramName} to camera_${camIndex}:`, result);
-    });
-  }
-
-  // --- Exposure toggle and slider logic ---
-  viewers.forEach(i => {
-    const toggle = document.getElementById(`exposureToggle${i}`);
-    const slider = document.getElementById(`exposureSlider${i}`);
-    const topicSelector = document.getElementById(`topic${i}`);
-
-    function getCamIndexFromTopic() {
-      const topic = topicSelector.value || '';
-      const match = topic.match(/camera_(\d+)/);
-      return match ? parseInt(match[1]) : null;
-    }
-
-    // Initialize slider state based on toggle
-    function updateExposureUI() {
-      if (toggle.checked) {
-        slider.style.display = 'none';
-        slider.disabled = true;
-      } else {
-        slider.style.display = 'block';
-        slider.disabled = false;
-      }
-    }
-    updateExposureUI();
-
-    toggle.addEventListener('change', () => {
-      const camIndex = getCamIndexFromTopic();
-      if (camIndex === null) {
-        console.warn(`⚠️ No valid topic selected for camera ${i}`);
-        updateExposureUI();
-        return;
-      }
-
-      if (toggle.checked) {
-        // Auto mode ON
-        slider.style.display = 'none';
-        slider.disabled = true;
-        setCameraParam(camIndex, 'exposure_mode', 'auto', 'string');
-      } else {
-        // Manual mode ON
-        slider.style.display = 'block';
-        slider.disabled = false;
-        setCameraParam(camIndex, 'exposure_mode', 'manual', 'string');
-        // Set the current slider value as exposure immediately
-        setCameraParam(camIndex, 'exposure_value', slider.value, 'integer');
-      }
-    });
-
-    slider.addEventListener('input', () => {
-      const camIndex = getCamIndexFromTopic();
-      // Only send if manual mode is active (auto toggle is unchecked)
-      if (camIndex !== null && !toggle.checked) {
-        setCameraParam(camIndex, 'exposure_value', slider.value, 'integer');
-      }
-    });
-
-    // Also update UI if topic changes (for initial state)
-    topicSelector.addEventListener('change', updateExposureUI);
-  });
-
+  // --- SYSTEM STATUS via rosbridge ---
   new ROSLIB.Topic({
     ros,
     name: '/battery_percent',
@@ -293,12 +243,136 @@
     messageType: 'std_msgs/String'
   }).subscribe(msg => document.getElementById('topic-freqs').textContent = msg.data);
 
+
+// --- Frequency Monitor Toggle ---
+const freqMonitorToggle = document.getElementById('freq-monitor-toggle');
+const freqMonitorClient = new ROSLIB.Service({
+  ros,
+  name: '/toggle_frequency_monitor',
+  serviceType: 'std_srvs/SetBool'
+});
+
+freqMonitorToggle.addEventListener('change', function() {
+  freqMonitorClient.callService(
+    { data: freqMonitorToggle.checked },
+    function(result) {
+      uiLog(`[freqMonitorToggle] Monitoring ${result.success ? 'enabled' : 'disabled'}: ${result.message}`);
+      // Optionally clear the display if disabled
+      if (!freqMonitorToggle.checked) {
+        document.getElementById('topic-freqs').textContent = "Monitoring disabled.";
+      }
+    }
+  );
+});
+
+
+
+  // ---- Backend bridge for parameter setting ----
+  function setCameraParam(camIndex, paramName, value, type = 'string') {
+    const payload = {
+      cam_index: camIndex,
+      param: paramName,
+      value: value.toString()
+    };
+    uiLog("[setCameraParam] Backend payload:", payload);
+
+    fetch("http://localhost:8001/set_param", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(result => {
+      uiLog("[setCameraParam] Backend response:", result);
+      if (result.success) {
+        uiLog(`[setCameraParam] SUCCESS setting ${paramName} for camera_${camIndex}`);
+      } else {
+        uiLog(`[setCameraParam] ERROR setting ${paramName} for camera_${camIndex}:`, result.error);
+      }
+    })
+    .catch(error => {
+      uiLog("[setCameraParam] Network or backend error:", error);
+    });
+  }
+
+  viewers.forEach(i => {
+    const toggle = document.getElementById(`exposureToggle${i}`);
+    const slider = document.getElementById(`exposureSlider${i}`);
+    const topicSelector = document.getElementById(`topic${i}`);
+
+    function getCamIndexFromTopic() {
+      const topic = topicSelector.value || '';
+      const match = topic.match(/camera_(\d+)/);
+      if (match) {
+        uiLog(`[getCamIndexFromTopic] Camera index for viewer${i}:`, match[1]);
+        return parseInt(match[1]);
+      } else {
+        uiLog(`[getCamIndexFromTopic] No camera index found for viewer${i}, topic:`, topic);
+        return null;
+      }
+    }
+
+    function updateExposureUI() {
+      if (toggle.checked) {
+        slider.style.display = 'none';
+        slider.disabled = true;
+        uiLog(`[UI] viewer${i}: Auto Exposure checked, hiding slider`);
+      } else {
+        slider.style.display = 'block';
+        slider.disabled = false;
+        uiLog(`[UI] viewer${i}: Auto Exposure unchecked, showing slider`);
+      }
+    }
+    updateExposureUI();
+
+    toggle.addEventListener('change', () => {
+      const camIndex = getCamIndexFromTopic();
+      if (camIndex === null) {
+        uiLog(`[toggle.change] No valid topic selected for camera ${i}`);
+        updateExposureUI();
+        return;
+      }
+
+      if (toggle.checked) {
+        // Auto mode ON
+        slider.style.display = 'none';
+        slider.disabled = true;
+        uiLog(`[toggle.change] viewer${i}: Auto Exposure ENABLED, sending exposure_mode=auto`);
+        setCameraParam(camIndex, 'exposure_mode', 'auto', 'string');
+      } else {
+        // Manual mode ON
+        slider.style.display = 'block';
+        slider.disabled = false;
+        uiLog(`[toggle.change] viewer${i}: Auto Exposure DISABLED, sending exposure_mode=manual`);
+        setCameraParam(camIndex, 'exposure_mode', 'manual', 'string');
+        // Set the current slider value as exposure immediately
+        uiLog(`[toggle.change] viewer${i}: Setting exposure_value=${slider.value}`);
+        setCameraParam(camIndex, 'exposure_value', slider.value, 'integer');
+      }
+    });
+
+    slider.addEventListener('input', () => {
+      const camIndex = getCamIndexFromTopic();
+      if (camIndex !== null && !toggle.checked) {
+        uiLog(`[slider.input] viewer${i}: Manual mode, setting exposure_value=${slider.value}`);
+        setCameraParam(camIndex, 'exposure_value', slider.value, 'integer');
+      } else {
+        uiLog(`[slider.input] viewer${i}: Ignored slider event (auto mode or no cam index)`);
+      }
+    });
+
+    topicSelector.addEventListener('change', () => {
+      uiLog(`[topicSelector.change] viewer${i}: Topic changed to`, topicSelector.value);
+      updateExposureUI();
+    });
+  });
+
   function startRecording() {
-    fetch('/start_recording').then(r => console.log("Recording started"));
+    fetch('/start_recording').then(r => uiLog("Recording started"));
   }
 
   function stopRecording() {
-    fetch('/stop_recording').then(r => console.log("Recording stopped"));
+    fetch('/stop_recording').then(r => uiLog("Recording stopped"));
   }
 </script>
 
