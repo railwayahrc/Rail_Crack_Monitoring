@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-874abf8a6f735e75ab1a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "daemon",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_daemon_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_daemon_egg-48ba3556e2ee54b463a7.json",
+					"name" : "ament_cmake_python_build_daemon_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_daemon::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_daemon-89335b8fdc0d79c0f444.json",
+					"name" : "ament_cmake_python_copy_daemon",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "daemon_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-daemon_uninstall-3990cf47dc786f29aed5.json",
+					"name" : "daemon_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "svo_recording_multicam::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-svo_recording_multicam-6961e52377f23d911ce6.json",
+					"name" : "svo_recording_multicam",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-fdc1e804f9f1c0c75f0d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jyo/ros2_ws/build/daemon",
+		"source" : "/home/jyo/ros2_ws/src/daemon"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/multi_camera_publisher/multi_camera_publisher.egg-info/PKG-INFO
+writing dependency_links to ../../build/multi_camera_publisher/multi_camera_publisher.egg-info/dependency_links.txt
+writing entry points to ../../build/multi_camera_publisher/multi_camera_publisher.egg-info/entry_points.txt
+writing requirements to ../../build/multi_camera_publisher/multi_camera_publisher.egg-info/requires.txt
+writing top-level names to ../../build/multi_camera_publisher/multi_camera_publisher.egg-info/top_level.txt
+reading manifest file '../../build/multi_camera_publisher/multi_camera_publisher.egg-info/SOURCES.txt'
+writing manifest file '../../build/multi_camera_publisher/multi_camera_publisher.egg-info/SOURCES.txt'
+running build
+running build_py
+copying multi_camera_publisher/multi_camera_publisher.py -> /home/jyo/ros2_ws/build/multi_camera_publisher/build/lib/multi_camera_publisher
+running install
+running install_lib
+copying /home/jyo/ros2_ws/build/multi_camera_publisher/build/lib/multi_camera_publisher/multi_camera_publisher.py -> /home/jyo/ros2_ws/install/multi_camera_publisher/lib/python3.10/site-packages/multi_camera_publisher
+byte-compiling /home/jyo/ros2_ws/install/multi_camera_publisher/lib/python3.10/site-packages/multi_camera_publisher/multi_camera_publisher.py to multi_camera_publisher.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/jyo/ros2_ws/install/multi_camera_publisher/lib/python3.10/site-packages/multi_camera_publisher-0.1.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/multi_camera_publisher/multi_camera_publisher.egg-info to /home/jyo/ros2_ws/install/multi_camera_publisher/lib/python3.10/site-packages/multi_camera_publisher-0.1.0-py3.10.egg-info
+running install_scripts
+Installing multi_camera_publisher script to /home/jyo/ros2_ws/install/multi_camera_publisher/lib/multi_camera_publisher
+writing list of installed files to '/home/jyo/ros2_ws/build/multi_camera_publisher/install.log'

@@ -1,0 +1,4 @@
+[console_scripts]
+frequency_monitor_node = system_monitor.frequency_monitor_node:main
+system_monitor_node = system_monitor.system_monitor_node:main
+

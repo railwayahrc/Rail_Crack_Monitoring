@@ -1,0 +1,8 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+canvas {
+  border: 1px solid #ccc;
+  background: black;
+}

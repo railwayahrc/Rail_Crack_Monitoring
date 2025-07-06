@@ -1,0 +1,3 @@
+[console_scripts]
+rosbag_control_node = rosbag_control.rosbag_control_node:main
+

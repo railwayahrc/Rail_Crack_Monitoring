@@ -1,0 +1,114 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Looking for sgemm_
+-- Looking for sgemm_ - not found
+-- Looking for sgemm_
+-- Looking for sgemm_ - found
+-- Found BLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so  
+-- Found CUDA: /usr/local/cuda (found suitable version "12.2", minimum required is "12") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jyo/ros2_ws/build/daemon
+[ 50%] [32mBuilding CXX object CMakeFiles/svo_recording_multicam.dir/src/main.cpp.o[0m
+[ 50%] Built target ament_cmake_python_copy_daemon
+running egg_info
+creating daemon.egg-info
+writing daemon.egg-info/PKG-INFO
+writing dependency_links to daemon.egg-info/dependency_links.txt
+writing top-level names to daemon.egg-info/top_level.txt
+writing manifest file 'daemon.egg-info/SOURCES.txt'
+reading manifest file 'daemon.egg-info/SOURCES.txt'
+writing manifest file 'daemon.egg-info/SOURCES.txt'
+[ 50%] Built target ament_cmake_python_build_daemon_egg
+[100%] [32m[1mLinking CXX executable svo_recording_multicam[0m
+[100%] Built target svo_recording_multicam
+-- Install configuration: ""
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/pythonpath.sh
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/pythonpath.dsv
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/topic_monitor.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/rostopics_to_record.txt
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/build
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/build/COLCON_IGNORE
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/build/.built_by
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/disk_space_topic.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/record.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/__init__.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/COLCON_IGNORE
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest_build
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest_build/logger_all.log
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/build_2024-05-29_00-01-39
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/build_2024-05-29_00-01-39/logger_all.log
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest/logger_all.log
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/install
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/install/COLCON_IGNORE
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/install/.colcon_install_layout
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon'...
+Compiling '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/__init__.py'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/build'...
+Compiling '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/disk_space_topic.py'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/install'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/build_2024-05-29_00-01-39'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest_build'...
+Compiling '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/record.py'...
+Compiling '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/topic_monitor.py'...
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/launch
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/launch/playback_launch.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/launch/init.launch.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/lib/daemon/record.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/lib/daemon/topic_monitor.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/lib/daemon/disk_space_topic.py
+-- Installing: /home/jyo/ros2_ws/install/daemon/lib/daemon/svo_recording_multicam
+-- Set runtime path of "/home/jyo/ros2_ws/install/daemon/lib/daemon/svo_recording_multicam" to ""
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/ament_index/resource_index/package_run_dependencies/daemon
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/ament_index/resource_index/parent_prefix_path/daemon
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/ament_prefix_path.sh
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/ament_prefix_path.dsv
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/path.sh
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/path.dsv
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/local_setup.bash
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/local_setup.sh
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/local_setup.zsh
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/local_setup.dsv
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/package.dsv
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/ament_index/resource_index/packages/daemon
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/cmake/daemonConfig.cmake
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/cmake/daemonConfig-version.cmake
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/package.xml

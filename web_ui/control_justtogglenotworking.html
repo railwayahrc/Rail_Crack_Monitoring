@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cart Control UI</title>
+  <script src="js/eventemitter2.min.js"></script>
+  <script src="js/roslib.min.js"></script>
+  <script src="js/mjpegcanvas.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+    }
+    #left-panel {
+      flex: 3;
+      padding: 10px;
+      background-color: #f2f2f2;
+      overflow-y: auto;
+    }
+    #right-panel {
+      flex: 1;
+      padding: 10px;
+      background-color: #e0e0e0;
+    }
+    .camera-section, .system-info-section, .freq-section {
+      margin-bottom: 20px;
+    }
+    .camera-row {
+      display: flex;
+      gap: 10px;
+    }
+    .camera-view {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .camera-view img {
+      border: 1px solid #ccc;
+      width: 100%;
+      height: auto;
+    }
+    select, input[type="checkbox"] {
+      margin-top: 5px;
+    }
+    .control-group {
+      margin-bottom: 10px;
+    }
+    button {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="left-panel">
+    <div class="camera-section">
+      <h2>Camera Feeds</h2>
+      <div class="camera-row">
+        <div class="camera-view">
+          <label><input type="checkbox" id="enableCam1" checked> Enable Cam 1</label>
+          <img id="viewer1" src="" alt="Cam 1" />
+          <select id="topic1"></select>
+          
+          <div class="control-group">
+  		<label>	<input type="checkbox" id="exposureToggle1" checked> Auto Exposure </label>
+  		<input type="range" id="exposureSlider1" min="1" max="5000" value="157" style="display: none;">
+	</div>
+
+
+        </div>
+        <div class="camera-view">
+          <label><input type="checkbox" id="enableCam2" checked> Enable Cam 2</label>
+          <img id="viewer2" src="" alt="Cam 2" />
+          <select id="topic2"></select>
+          
+          <div class="control-group">
+  		<label>	<input type="checkbox" id="exposureToggle2" checked> Auto Exposure </label>
+  		<input type="range" id="exposureSlider2" min="1" max="5000" value="157" style="display: none;">
+	</div>
+
+        </div>
+        <div class="camera-view">
+          <label><input type="checkbox" id="enableCam3" checked> Enable Cam 3</label>
+          <img id="viewer3" src="" alt="Cam 3" />
+          <select id="topic3"></select>
+          
+          <div class="control-group">
+  		<label>	<input type="checkbox" id="exposureToggle3" checked> Auto Exposure </label>
+  		<input type="range" id="exposureSlider3" min="1" max="5000" value="157" style="display: none;">
+	</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="system-info-section">
+      <h3>System Stats</h3>
+      <p>Battery: <span id="battery-percent">--%</span></p>
+      <p>Time: <span id="system-time">--:--</span></p>
+      <p>Disk: <span id="disk-usage">--</span></p>
+    </div>
+
+    <div class="freq-section">
+      <h3>Topic Frequencies</h3>
+      <pre id="topic-freqs">Waiting...</pre>
+    </div>
+  </div>
+
+  <div id="right-panel">
+    <h2>Cart Control</h2>
+    <div class="control-group">
+      <label for="speed">Speed</label>
+      <input type="range" id="speed" min="0" max="255" value="0">
+    </div>
+    <div class="control-group">
+      <label><input type="checkbox" id="reverse"> Reverse</label>
+    </div>
+    <div class="control-group">
+      <label><input type="checkbox" id="light1"> Light 1</label><br>
+      <label><input type="checkbox" id="light2"> Light 2</label>
+    </div>
+    <div class="control-group">
+      <button onclick="startRecording()">Start Recording</button>
+      <button onclick="stopRecording()">Stop Recording</button>
+    </div>
+  </div>
+
+  <script>
+    const ros = new ROSLIB.Ros({ url: 'ws://localhost:9090' });
+    ros.on('connection', () => console.log('✅ Connected to rosbridge'));
+
+    const viewers = [1, 2, 3];
+    const imgTags = ["viewer1", "viewer2", "viewer3"];
+    const topicSelects = ["topic1", "topic2", "topic3"];
+
+    viewers.forEach(i => {
+      document.getElementById(`enableCam${i}`).addEventListener('change', () => updateViewer(i));
+      document.getElementById(`topic${i}`).addEventListener('change', () => updateViewer(i));
+    });
+
+    function updateViewer(i) {
+      const enabled = document.getElementById(`enableCam${i}`).checked;
+      const topic = document.getElementById(`topic${i}`).value;
+      const img = document.getElementById(`viewer${i}`);
+      img.src = enabled && topic ? `http://localhost:8080/stream?topic=${topic}` : "";
+    }
+
+    function fetchImageTopics() {
+      ros.getTopics((topics) => {
+        const imageTopics = topics.topics.filter((t, idx) => topics.types[idx] === 'sensor_msgs/msg/Image');
+        viewers.forEach(i => {
+          const select = document.getElementById(`topic${i}`);
+          select.innerHTML = '';
+          imageTopics.forEach(topic => {
+            const opt = document.createElement('option');
+            opt.value = topic;
+            opt.text = topic;
+            select.appendChild(opt);
+          });
+          updateViewer(i);
+        });
+      });
+    }
+
+    fetchImageTopics();
+// 🛠 Dynamically set ROS parameters using service calls
+function setCameraParam(camIndex, paramName, value, type = 'string') {
+  const service = new ROSLIB.Service({
+    ros: ros,
+    name: '/multi_camera_parallel_node/set_parameters',
+    serviceType: 'rcl_interfaces/srv/SetParameters'
+  });
+
+ let paramValue;
+if (type === 'string') {
+  paramValue = {
+    type: 3,
+    string_value: value
+  };
+} else if (type === 'integer') {
+  paramValue = {
+    type: 2,
+    integer_value: parseInt(value)
+  };
+}
+
+ const request = new ROSLIB.ServiceRequest({
+  parameters: [{
+    name: `camera_${camIndex}.${paramName}`,
+    value: paramValue  // This part is correct now
+  }]
+});
+
+
+  service.callService(request, result => {
+    console.log(`✅ ${paramName} for camera_${camIndex}:`, result);
+  });
+}
+
+// 🎛 Hook up each toggle & slider
+viewers.forEach(i => {
+  const toggle = document.getElementById(`exposureToggle${i}`);
+  const slider = document.getElementById(`exposureSlider${i}`);
+  const camIndex = i - 1;
+
+  toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+      slider.style.display = 'none';
+      setCameraParam(camIndex, 'exposure_mode', 'auto', 'string');
+    } else {
+      slider.style.display = 'block';
+      setCameraParam(camIndex, 'exposure_mode', 'manual', 'string');
+      setCameraParam(camIndex, 'exposure_value', slider.value, 'integer');
+    }
+  });
+
+  slider.addEventListener('input', () => {
+    if (!toggle.checked) {
+      setCameraParam(camIndex, 'exposure_value', slider.value, 'integer');
+    }
+  });
+});
+
+
+
+
+    new ROSLIB.Topic({
+      ros,
+      name: '/battery_percent',
+      messageType: 'std_msgs/String'
+    }).subscribe(msg => document.getElementById('battery-percent').textContent = msg.data);
+
+    new ROSLIB.Topic({
+      ros,
+      name: '/system_time',
+      messageType: 'std_msgs/String'
+    }).subscribe(msg => document.getElementById('system-time').textContent = msg.data);
+
+    new ROSLIB.Topic({
+      ros,
+      name: '/disk_usage',
+      messageType: 'std_msgs/String'
+    }).subscribe(msg => document.getElementById('disk-usage').textContent = msg.data);
+
+    new ROSLIB.Topic({
+      ros,
+      name: '/topic_frequencies',
+      messageType: 'std_msgs/String'
+    }).subscribe(msg => document.getElementById('topic-freqs').textContent = msg.data);
+
+    function startRecording() {
+      fetch('/start_recording').then(r => console.log("Recording started"));
+    }
+
+    function stopRecording() {
+      fetch('/stop_recording').then(r => console.log("Recording stopped"));
+    }
+  </script>
+</body>
+</html>
+

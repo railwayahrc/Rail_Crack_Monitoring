@@ -1,0 +1,114 @@
+In file included from [01m[K/home/jyo/ros2_ws/src/daemon/src/main.cpp:27[m[K:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:1156:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 1156 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:1307:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 1307 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:1493:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 1493 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:1708:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 1708 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:1712:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 1712 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:1716:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 1716 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2024:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 2024 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2028:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 2028 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2032:20:[m[K [01;35m[Kwarning: [m[KISO C++ prohibits anonymous structs [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wpedantic-Wpedantic]8;;[m[K]
+ 2032 |             struct [01;35m[K{[m[K
+      |                    [01;35m[K^[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In function ‘[01m[Ksl::Timestamp sl::operator+(sl::Timestamp, const sl::Timestamp&)[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2583:16:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr sl::Timestamp::Timestamp(const sl::Timestamp&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 2583 |         return [01;35m[Klhs[m[K;
+      |                [01;35m[K^~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2504:20:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[Ksl::Timestamp[m[K’ has user-provided ‘[01m[Ksl::Timestamp& sl::Timestamp::operator=(sl::Timestamp)[m[K’
+ 2504 |         Timestamp& [01;36m[Koperator[m[K=(Timestamp other) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In function ‘[01m[Ksl::Timestamp sl::operator-(sl::Timestamp, const sl::Timestamp&)[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2588:16:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr sl::Timestamp::Timestamp(const sl::Timestamp&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 2588 |         return [01;35m[Klhs[m[K;
+      |                [01;35m[K^~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2504:20:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[Ksl::Timestamp[m[K’ has user-provided ‘[01m[Ksl::Timestamp& sl::Timestamp::operator=(sl::Timestamp)[m[K’
+ 2504 |         Timestamp& [01;36m[Koperator[m[K=(Timestamp other) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In function ‘[01m[Ksl::Timestamp sl::operator/(sl::Timestamp, const sl::Timestamp&)[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2593:16:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr sl::Timestamp::Timestamp(const sl::Timestamp&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 2593 |         return [01;35m[Klhs[m[K;
+      |                [01;35m[K^~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2504:20:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[Ksl::Timestamp[m[K’ has user-provided ‘[01m[Ksl::Timestamp& sl::Timestamp::operator=(sl::Timestamp)[m[K’
+ 2504 |         Timestamp& [01;36m[Koperator[m[K=(Timestamp other) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In function ‘[01m[Ksl::Timestamp sl::operator*(sl::Timestamp, const sl::Timestamp&)[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2598:16:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr sl::Timestamp::Timestamp(const sl::Timestamp&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 2598 |         return [01;35m[Klhs[m[K;
+      |                [01;35m[K^~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2504:20:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[Ksl::Timestamp[m[K’ has user-provided ‘[01m[Ksl::Timestamp& sl::Timestamp::operator=(sl::Timestamp)[m[K’
+ 2504 |         Timestamp& [01;36m[Koperator[m[K=(Timestamp other) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In function ‘[01m[Ksl::Timestamp sl::getCurrentTimeStamp()[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2632:16:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr sl::Timestamp::Timestamp(const sl::Timestamp&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 2632 |         return [01;35m[Kcurrent_ts[m[K;
+      |                [01;35m[K^~~~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2504:20:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[Ksl::Timestamp[m[K’ has user-provided ‘[01m[Ksl::Timestamp& sl::Timestamp::operator=(sl::Timestamp)[m[K’
+ 2504 |         Timestamp& [01;36m[Koperator[m[K=(Timestamp other) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In function ‘[01m[KcudaError sl::__cudaSafeCall(cudaError, const char*, const char*, int)[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2639:89:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfile[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 2639 |     static inline cudaError __cudaSafeCall(cudaError err, const char *func, [01;35m[Kconst char *file[m[K, const int line) {
+      |                                                                             [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2639:105:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kline[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 2639 |     static inline cudaError __cudaSafeCall(cudaError err, const char *func, const char *file, [01;35m[Kconst int line[m[K) {
+      |                                                                                               [01;35m[K~~~~~~~~~~^~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In member function ‘[01m[Ksl::CalibrationParameters sl::CalibrationParameters::scale(const sl::Resolution&) const[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:3755:62:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Ksl::Transform& sl::Transform::operator=(const sl::Transform&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 3755 |             output_calibration_parameters.stereo_transform = [01;35m[Kstereo_transform[m[K;
+      |                                                              [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:3538:9:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[Ksl::Transform[m[K’ has user-provided ‘[01m[Ksl::Transform::Transform(const sl::Transform&)[m[K’
+ 3538 |         [01;36m[KTransform[m[K(const Transform &motion);
+      |         [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In member function ‘[01m[Ksl::Transform& sl::Transform::operator=(const sl::Transform&)[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:3527:60:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Ksl::Matrix4f& sl::Matrix4f::operator=(const sl::Matrix4f&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 3527 |     class /*@cond SHOWHIDDEN*/ SL_CORE_EXPORT /*@endcond*/ [01;35m[KTransform[m[K : public Matrix4f {
+      |                                                            [01;35m[K^~~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:1329:9:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[Ksl::Matrix4f[m[K’ has user-provided ‘[01m[Ksl::Matrix4f::Matrix4f(const sl::Matrix4f&)[m[K’
+ 1329 |         [01;36m[KMatrix4f[m[K(const Matrix4f &mat);
+      |         [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In member function ‘[01m[Ksl::CalibrationParameters sl::CalibrationParameters::scale(const sl::Resolution&) const[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:3755:62:[m[K [01;36m[Knote: [m[Ksynthesized method ‘[01m[Ksl::Transform& sl::Transform::operator=(const sl::Transform&)[m[K’ first required here
+ 3755 |             output_calibration_parameters.stereo_transform = [01;36m[Kstereo_transform[m[K;
+      |                                                              [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K In constructor ‘[01m[Ksl::SVOData::SVOData(std::string&, std::vector<unsigned char>&, sl::Timestamp)[m[K’:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:6058:28:[m[K [01;35m[Kwarning: [m[Kimplicitly-declared ‘[01m[Kconstexpr sl::Timestamp::Timestamp(const sl::Timestamp&)[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-copy-Wdeprecated-copy]8;;[m[K]
+ 6058 |             timestamp_ns = [01;35m[Ktimestamp_ns_[m[K;
+      |                            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2504:20:[m[K [01;36m[Knote: [m[Kbecause ‘[01m[Ksl::Timestamp[m[K’ has user-provided ‘[01m[Ksl::Timestamp& sl::Timestamp::operator=(sl::Timestamp)[m[K’
+ 2504 |         Timestamp& [01;36m[Koperator[m[K=(Timestamp other) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:2504:40:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Ksl::Timestamp& sl::Timestamp::operator=(sl::Timestamp)[m[K’
+ 2504 |         Timestamp& operator=([01;36m[KTimestamp other[m[K) {
+      |                              [01;36m[K~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/local/zed/include/sl/Camera.hpp:[m[K At global scope:
+[01m[K/usr/local/zed/include/sl/Camera.hpp:6984:12:[m[K [01;35m[Kwarning: [m[Ktype qualifiers ignored on function return type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wignored-qualifiers-Wignored-qualifiers]8;;[m[K]
+ 6984 |     inline [01;35m[Kconst[m[K void /*@cond SHOWHIDDEN*/SL_SDK_EXPORT/*@endcond*/ getZEDSDKBuildVersion(int &major, int& minor, int& patch) {
+      |            [01;35m[K^~~~~[m[K
+In file included from [01m[K/home/jyo/ros2_ws/src/daemon/src/main.cpp:30[m[K:
+[01m[K/home/jyo/ros2_ws/src/daemon/include/utils.hpp:[m[K In function ‘[01m[Kvoid nix_exit_handler(int)[m[K’:
+[01m[K/home/jyo/ros2_ws/src/daemon/include/utils.hpp:34:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ks[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   34 | void nix_exit_handler([01;35m[Kint s[m[K) {
+      |                       [01;35m[K~~~~^[m[K
+[01m[K/home/jyo/ros2_ws/src/daemon/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jyo/ros2_ws/src/daemon/src/main.cpp:128:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kfor[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+  128 |     [01;35m[Kfor[m[K (int z = 0; z < NB_ZED; z++)
+      |     [01;35m[K^~~[m[K
+[01m[K/home/jyo/ros2_ws/src/daemon/src/main.cpp:133:9:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kfor[m[K’
+  133 |         [01;36m[Kfor[m[K (int z = 0; z < NB_ZED; z++)
+      |         [01;36m[K^~~[m[K

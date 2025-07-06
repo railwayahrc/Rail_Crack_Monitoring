@@ -1,0 +1,21 @@
+[1.709s] Invoking command in '/home/jyo/ros2_ws/src/battery_monitor': PYTHONPATH=/home/jyo/ros2_ws/build/battery_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/battery_monitor build --build-base /home/jyo/ros2_ws/build/battery_monitor/build install --record /home/jyo/ros2_ws/build/battery_monitor/install.log --single-version-externally-managed install_data
+[1.954s] running egg_info
+[1.955s] writing ../../build/battery_monitor/battery_monitor.egg-info/PKG-INFO
+[1.955s] writing dependency_links to ../../build/battery_monitor/battery_monitor.egg-info/dependency_links.txt
+[1.955s] writing entry points to ../../build/battery_monitor/battery_monitor.egg-info/entry_points.txt
+[1.955s] writing requirements to ../../build/battery_monitor/battery_monitor.egg-info/requires.txt
+[1.955s] writing top-level names to ../../build/battery_monitor/battery_monitor.egg-info/top_level.txt
+[1.957s] reading manifest file '../../build/battery_monitor/battery_monitor.egg-info/SOURCES.txt'
+[1.958s] writing manifest file '../../build/battery_monitor/battery_monitor.egg-info/SOURCES.txt'
+[1.958s] running build
+[1.958s] running build_py
+[1.959s] running install
+[1.959s] running install_lib
+[1.961s] running install_data
+[1.961s] running install_egg_info
+[1.963s] removing '/home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages/battery_monitor-0.0.0-py3.10.egg-info' (and everything under it)
+[1.963s] Copying ../../build/battery_monitor/battery_monitor.egg-info to /home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages/battery_monitor-0.0.0-py3.10.egg-info
+[1.965s] running install_scripts
+[1.988s] Installing battery_monitor script to /home/jyo/ros2_ws/install/battery_monitor/lib/battery_monitor
+[1.989s] writing list of installed files to '/home/jyo/ros2_ws/build/battery_monitor/install.log'
+[2.037s] Invoked command in '/home/jyo/ros2_ws/src/battery_monitor' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/battery_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/battery_monitor build --build-base /home/jyo/ros2_ws/build/battery_monitor/build install --record /home/jyo/ros2_ws/build/battery_monitor/install.log --single-version-externally-managed install_data

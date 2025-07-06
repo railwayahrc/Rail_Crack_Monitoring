@@ -1,0 +1,3 @@
+[console_scripts]
+multi_camera_publisher = multi_camera_pkg.multi_camera_publisher:main
+

@@ -1,0 +1,3 @@
+[console_scripts]
+cart_control_node = cart_control.cart_control_node:main
+

@@ -1,0 +1,1 @@
+/camera_right/ir_raw/compressed

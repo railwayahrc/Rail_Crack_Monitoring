@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>cart_control</name>
+  <version>0.0.0</version>
+  <description>Python ROS 2 package to control Arduino-driven cart</description>
+  <maintainer email="jyo@todo.todo">jyo</maintainer>
+  <license>MIT</license>
+
+  <!-- Required run-time dependencies -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>pyserial</exec_depend>
+
+  <!-- Testing dependencies (optional for now) -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+

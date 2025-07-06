@@ -1,0 +1,20 @@
+[1.682s] Invoking command in '/home/jyo/ros2_ws/src/rosbag_control': PYTHONPATH=/home/jyo/ros2_ws/build/rosbag_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/rosbag_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rosbag_control build --build-base /home/jyo/ros2_ws/build/rosbag_control/build install --record /home/jyo/ros2_ws/build/rosbag_control/install.log --single-version-externally-managed
+[1.948s] running egg_info
+[1.948s] writing ../../build/rosbag_control/rosbag_control.egg-info/PKG-INFO
+[1.949s] writing dependency_links to ../../build/rosbag_control/rosbag_control.egg-info/dependency_links.txt
+[1.949s] writing entry points to ../../build/rosbag_control/rosbag_control.egg-info/entry_points.txt
+[1.949s] writing requirements to ../../build/rosbag_control/rosbag_control.egg-info/requires.txt
+[1.949s] writing top-level names to ../../build/rosbag_control/rosbag_control.egg-info/top_level.txt
+[1.951s] reading manifest file '../../build/rosbag_control/rosbag_control.egg-info/SOURCES.txt'
+[1.952s] writing manifest file '../../build/rosbag_control/rosbag_control.egg-info/SOURCES.txt'
+[1.952s] running build
+[1.952s] running build_py
+[1.952s] running install
+[1.953s] running install_lib
+[1.954s] running install_egg_info
+[1.956s] removing '/home/jyo/ros2_ws/install/rosbag_control/lib/python3.10/site-packages/rosbag_control-0.0.0-py3.10.egg-info' (and everything under it)
+[1.957s] Copying ../../build/rosbag_control/rosbag_control.egg-info to /home/jyo/ros2_ws/install/rosbag_control/lib/python3.10/site-packages/rosbag_control-0.0.0-py3.10.egg-info
+[1.958s] running install_scripts
+[1.979s] Installing rosbag_control_node script to /home/jyo/ros2_ws/install/rosbag_control/lib/rosbag_control
+[1.980s] writing list of installed files to '/home/jyo/ros2_ws/build/rosbag_control/install.log'
+[2.041s] Invoked command in '/home/jyo/ros2_ws/src/rosbag_control' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/rosbag_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/rosbag_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rosbag_control build --build-base /home/jyo/ros2_ws/build/rosbag_control/build install --record /home/jyo/ros2_ws/build/rosbag_control/install.log --single-version-externally-managed

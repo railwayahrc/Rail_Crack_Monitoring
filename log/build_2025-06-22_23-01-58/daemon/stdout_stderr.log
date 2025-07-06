@@ -1,0 +1,67 @@
+[35m[1mConsolidate compiler generated dependencies of target svo_recording_multicam[0m
+[  0%] Built target ament_cmake_python_copy_daemon
+[100%] Built target svo_recording_multicam
+running egg_info
+writing daemon.egg-info/PKG-INFO
+writing dependency_links to daemon.egg-info/dependency_links.txt
+writing top-level names to daemon.egg-info/top_level.txt
+reading manifest file 'daemon.egg-info/SOURCES.txt'
+writing manifest file 'daemon.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_daemon_egg
+-- Install configuration: ""
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/pythonpath.sh
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/pythonpath.dsv
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon-0.1.0-py3.10.egg-info/dependency_links.txt
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/topic_monitor.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/rostopics_to_record.txt
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/build
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/build/COLCON_IGNORE
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/build/.built_by
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/disk_space_topic.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/record.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/__init__.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/COLCON_IGNORE
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest_build
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest_build/logger_all.log
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/build_2024-05-29_00-01-39
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/build_2024-05-29_00-01-39/logger_all.log
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest/logger_all.log
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/install
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/install/COLCON_IGNORE
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/install/.colcon_install_layout
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/build'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/install'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/build_2024-05-29_00-01-39'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest'...
+Listing '/home/jyo/ros2_ws/install/daemon/local/lib/python3.10/dist-packages/daemon/log/latest_build'...
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/launch
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/launch/playback_launch.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/launch/init.launch.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/lib/daemon/record.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/lib/daemon/topic_monitor.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/lib/daemon/disk_space_topic.py
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/lib/daemon/svo_recording_multicam
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/ament_index/resource_index/package_run_dependencies/daemon
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/ament_index/resource_index/parent_prefix_path/daemon
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/ament_prefix_path.sh
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/path.sh
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/environment/path.dsv
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/local_setup.bash
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/local_setup.sh
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/local_setup.zsh
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/local_setup.dsv
+-- Installing: /home/jyo/ros2_ws/install/daemon/share/daemon/package.dsv
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/ament_index/resource_index/packages/daemon
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/cmake/daemonConfig.cmake
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/cmake/daemonConfig-version.cmake
+-- Up-to-date: /home/jyo/ros2_ws/install/daemon/share/daemon/package.xml
