@@ -33,6 +33,7 @@ void loop() {
       digitalWrite(armPin, HIGH);
       analogWrite(motorPWM, constrain(speed, 0, 255));
     } else {
+      speed = 0;
       digitalWrite(armPin, LOW);
       analogWrite(motorPWM, 0); // Always stop motor if not armed
     }
