@@ -1,0 +1,21 @@
+[1.950s] Invoking command in '/home/jyo/ros2_ws/src/multi_camera_pkg': PYTHONPATH=/home/jyo/ros2_ws/build/multi_camera_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/multi_camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/multi_camera_pkg build --build-base /home/jyo/ros2_ws/build/multi_camera_pkg/build install --record /home/jyo/ros2_ws/build/multi_camera_pkg/install.log --single-version-externally-managed install_data
+[2.194s] running egg_info
+[2.194s] writing ../../build/multi_camera_pkg/multi_camera_pkg.egg-info/PKG-INFO
+[2.195s] writing dependency_links to ../../build/multi_camera_pkg/multi_camera_pkg.egg-info/dependency_links.txt
+[2.195s] writing entry points to ../../build/multi_camera_pkg/multi_camera_pkg.egg-info/entry_points.txt
+[2.195s] writing requirements to ../../build/multi_camera_pkg/multi_camera_pkg.egg-info/requires.txt
+[2.195s] writing top-level names to ../../build/multi_camera_pkg/multi_camera_pkg.egg-info/top_level.txt
+[2.197s] reading manifest file '../../build/multi_camera_pkg/multi_camera_pkg.egg-info/SOURCES.txt'
+[2.198s] writing manifest file '../../build/multi_camera_pkg/multi_camera_pkg.egg-info/SOURCES.txt'
+[2.198s] running build
+[2.198s] running build_py
+[2.198s] running install
+[2.199s] running install_lib
+[2.201s] running install_data
+[2.201s] running install_egg_info
+[2.203s] removing '/home/jyo/ros2_ws/install/multi_camera_pkg/lib/python3.10/site-packages/multi_camera_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[2.204s] Copying ../../build/multi_camera_pkg/multi_camera_pkg.egg-info to /home/jyo/ros2_ws/install/multi_camera_pkg/lib/python3.10/site-packages/multi_camera_pkg-0.0.0-py3.10.egg-info
+[2.205s] running install_scripts
+[2.228s] Installing multi_camera_publisher script to /home/jyo/ros2_ws/install/multi_camera_pkg/lib/multi_camera_pkg
+[2.228s] writing list of installed files to '/home/jyo/ros2_ws/build/multi_camera_pkg/install.log'
+[2.273s] Invoked command in '/home/jyo/ros2_ws/src/multi_camera_pkg' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/multi_camera_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/multi_camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/multi_camera_pkg build --build-base /home/jyo/ros2_ws/build/multi_camera_pkg/build install --record /home/jyo/ros2_ws/build/multi_camera_pkg/install.log --single-version-externally-managed install_data

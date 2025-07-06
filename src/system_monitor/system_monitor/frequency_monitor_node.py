@@ -13,42 +13,57 @@ class FrequencyMonitor(Node):
         super().__init__('frequency_monitor_node')
         self.monitoring_enabled = True
         self.timestamps = defaultdict(lambda: deque(maxlen=100))
-        self.subscribers = []
+        self.subscribers = {}
         self.publisher = self.create_publisher(String, '/topic_frequencies', 10)
         self.srv = self.create_service(SetBool, '/toggle_frequency_monitor', self.handle_toggle_monitor)
-        self.timer = self.create_timer(2.0, self.publish_frequencies)
+        self.freq_timer = self.create_timer(2.0, self.publish_frequencies)
+        self.discovery_timer = self.create_timer(5.0, self.periodic_discover_and_subscribe)
         self.topic_types = {}  # topic_name -> type_string
         self._discover_and_subscribe()
+
+    def periodic_discover_and_subscribe(self):
+        """Periodically re-discover topics and update subscribers."""
+        if self.monitoring_enabled:
+            self._discover_and_subscribe()
 
     def _discover_and_subscribe(self):
         # Get all topic names and types
         topic_info = self.get_topic_names_and_types()
         # Exclude output and system topics
-        self.topic_types = {name: types[0] for name, types in topic_info if name not in EXCLUDE_TOPICS and types}
-        self.get_logger().info(f"Monitoring topics: {list(self.topic_types.keys())}")
-        self._create_subscribers()
+        new_topic_types = {name: types[0] for name, types in topic_info
+                           if name not in EXCLUDE_TOPICS and types}
+
+        # Only do work if the set of topics has changed
+        if set(new_topic_types.keys()) != set(self.topic_types.keys()):
+            self.get_logger().info(f"Updating monitored topics: {list(new_topic_types.keys())}")
+            self.topic_types = new_topic_types
+            self._create_subscribers()
 
     def _create_subscribers(self):
-        # Remove any existing subscribers first
-        for sub in self.subscribers:
-            self.destroy_subscription(sub)
-        self.subscribers = []
+        # Remove subscribers for topics that no longer exist
+        for topic in list(self.subscribers.keys()):
+            if topic not in self.topic_types:
+                self.destroy_subscription(self.subscribers[topic])
+                del self.subscribers[topic]
+                if topic in self.timestamps:
+                    del self.timestamps[topic]
 
+        # Add new subscribers for new topics
         if self.monitoring_enabled:
             for topic, type_str in self.topic_types.items():
-                msg_class = self._import_message_class(type_str)
-                if msg_class is None:
-                    self.get_logger().warn(f"Could not import message type {type_str} for topic {topic}")
-                    continue
-                # Use partial to bind topic name for callback (avoid lambda late binding issue[1])
-                from functools import partial
-                sub = self.create_subscription(
-                    msg_class,
-                    topic,
-                    partial(self._generic_callback, topic=topic),
-                    10
-                )
-                self.subscribers.append(sub)
+                if topic not in self.subscribers:
+                    msg_class = self._import_message_class(type_str)
+                    if msg_class is None:
+                        self.get_logger().warn(f"Could not import message type {type_str} for topic {topic}")
+                        continue
+                    from functools import partial
+                    sub = self.create_subscription(
+                        msg_class,
+                        topic,
+                        partial(self._generic_callback, topic=topic),
+                        10
+                    )
+                    self.subscribers[topic] = sub
 
     def _import_message_class(self, type_str):
         # type_str example: 'std_msgs/msg/String'
@@ -83,17 +98,22 @@ class FrequencyMonitor(Node):
         self.monitoring_enabled = request.data
         if self.monitoring_enabled:
             self.get_logger().info("Frequency monitoring ENABLED")
-            self._create_subscribers()
-            if self.timer is None:
-                self.timer = self.create_timer(2.0, self.publish_frequencies)
+            self._discover_and_subscribe()
+            if self.freq_timer is None:
+                self.freq_timer = self.create_timer(2.0, self.publish_frequencies)
+            if self.discovery_timer is None:
+                self.discovery_timer = self.create_timer(5.0, self.periodic_discover_and_subscribe)
         else:
             self.get_logger().info("Frequency monitoring DISABLED")
-            for sub in self.subscribers:
+            for sub in self.subscribers.values():
                 self.destroy_subscription(sub)
-            self.subscribers = []
-            if self.timer is not None:
-                self.timer.cancel()
-                self.timer = None
+            self.subscribers = {}
+            if self.freq_timer is not None:
+                self.freq_timer.cancel()
+                self.freq_timer = None
+            if self.discovery_timer is not None:
+                self.discovery_timer.cancel()
+                self.discovery_timer = None
         response.success = True
         response.message = "Monitoring " + ("enabled" if self.monitoring_enabled else "disabled")
         return response

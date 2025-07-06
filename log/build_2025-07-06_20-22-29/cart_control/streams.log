@@ -1,0 +1,21 @@
+[1.971s] Invoking command in '/home/jyo/ros2_ws/src/cart_control': PYTHONPATH=/home/jyo/ros2_ws/build/cart_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/cart_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cart_control build --build-base /home/jyo/ros2_ws/build/cart_control/build install --record /home/jyo/ros2_ws/build/cart_control/install.log --single-version-externally-managed install_data
+[2.221s] running egg_info
+[2.222s] writing ../../build/cart_control/cart_control.egg-info/PKG-INFO
+[2.222s] writing dependency_links to ../../build/cart_control/cart_control.egg-info/dependency_links.txt
+[2.222s] writing entry points to ../../build/cart_control/cart_control.egg-info/entry_points.txt
+[2.223s] writing requirements to ../../build/cart_control/cart_control.egg-info/requires.txt
+[2.223s] writing top-level names to ../../build/cart_control/cart_control.egg-info/top_level.txt
+[2.225s] reading manifest file '../../build/cart_control/cart_control.egg-info/SOURCES.txt'
+[2.225s] writing manifest file '../../build/cart_control/cart_control.egg-info/SOURCES.txt'
+[2.226s] running build
+[2.226s] running build_py
+[2.226s] running install
+[2.226s] running install_lib
+[2.228s] running install_data
+[2.228s] running install_egg_info
+[2.232s] removing '/home/jyo/ros2_ws/install/cart_control/lib/python3.10/site-packages/cart_control-0.0.0-py3.10.egg-info' (and everything under it)
+[2.232s] Copying ../../build/cart_control/cart_control.egg-info to /home/jyo/ros2_ws/install/cart_control/lib/python3.10/site-packages/cart_control-0.0.0-py3.10.egg-info
+[2.233s] running install_scripts
+[2.256s] Installing cart_control_node script to /home/jyo/ros2_ws/install/cart_control/lib/cart_control
+[2.256s] writing list of installed files to '/home/jyo/ros2_ws/build/cart_control/install.log'
+[2.313s] Invoked command in '/home/jyo/ros2_ws/src/cart_control' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/cart_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/cart_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cart_control build --build-base /home/jyo/ros2_ws/build/cart_control/build install --record /home/jyo/ros2_ws/build/cart_control/install.log --single-version-externally-managed install_data
