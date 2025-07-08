@@ -15,7 +15,7 @@ tmux new-window -t $SESSION:6 -n rosbridge 'source ~/.bashrc && ros2 launch rosb
 tmux new-window -t $SESSION:7 -n web_video 'ros2 run web_video_server web_video_server; exec bash -i'
 tmux new-window -t $SESSION:8 -n http_server 'cd ~/ros2_ws/web_ui && python3 -m http.server 8000; exec bash -i'
 tmux new-window -t $SESSION:9 -n uvicorn 'cd ~/ros2_ws/web_ui/ && uvicorn set_param_server:app --host 0.0.0.0 --port 8001; exec bash -i'
-tmux new-window -t $SESSION:10 -n browser 'xdg-open http://localhost:8000/control5.html; exec bash -i'
+tmux new-window -t $SESSION:10 -n browser 'xdg-open http://localhost:8000/control.html; exec bash -i'
 
 # Attach to the session
 tmux attach-session -t $SESSION

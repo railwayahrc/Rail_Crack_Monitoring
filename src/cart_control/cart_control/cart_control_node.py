@@ -12,7 +12,7 @@ class CartControlNode(Node):
 
         device_param = self.declare_parameter(
             'device',
-            '/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0'
+            '/dev/serial/by-id/usb-Arduino__www.arduino.cc__0042_03536383236351902133-if00'
         ).value
         self.get_logger().info(f"[INIT] Trying to connect to Arduino on port: {device_param}")
 
