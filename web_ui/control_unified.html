@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Cart Control UI</title>
+<script src="js/config.js"></script>
 <script src="js/eventemitter2.min.js"></script>
 <script src="js/roslib.min.js"></script>
 <script src="js/mjpegcanvas.min.js"></script>
@@ -277,7 +278,7 @@ window.onunhandledrejection = function(event) {
 });
 
 // --- ROSBRIDGE: for topics and system status ---
-const ros = new ROSLIB.Ros({ url: 'ws://localhost:9090' });
+const ros = new ROSLIB.Ros({ url: `ws://${SERVER_IP}:9090` });
 ros.on('connection', () => uiLog('✅ Connected to rosbridge'));
 ros.on('error', err => uiLog('❌ ROS connection error:', err));
 ros.on('close', () => uiLog('❌ ROS connection closed'));
@@ -295,7 +296,7 @@ function updateViewer(i) {
   const enabled = document.getElementById(`enableCam${i}`).checked;
   const topic = document.getElementById(`topic${i}`).value;
   const img = document.getElementById(`viewer${i}`);
-  img.src = enabled && topic ? `http://localhost:8080/stream?topic=${topic}` : "";
+  img.src = enabled && topic ? `http://${SERVER_IP}:8080/stream?topic=${topic}` : "";
   uiLog(`[updateViewer] viewer${i}: enabled=${enabled}, topic=${topic}, img.src=${img.src}`);
 }
 
@@ -375,7 +376,7 @@ function setCameraParam(camIndex, paramName, value, type = 'string') {
   };
   uiLog("[setCameraParam] Backend payload:", payload);
 
-  fetch("http://localhost:8001/set_param", {
+  fetch(`http://${SERVER_IP}:8001/set_param`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
@@ -506,7 +507,7 @@ function populateRosbagTopics() {
   });
 }
 populateRosbagTopics();
-setInterval(populateRosbagTopics, 30000);
+// setInterval(populateRosbagTopics, 30000);
 
 let rosbagRecording = false;
 function updateRosbagStatus() {

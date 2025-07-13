@@ -5,14 +5,24 @@ import subprocess
 
 app = FastAPI()
 
-# Allow all origins for testing. Restrict as needed for production.
+# Standard CORS middleware (keep this for best compatibility)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],         # Allow all origins
+    allow_origins=["*"],         # Allow all origins (for testing; restrict in production)
     allow_credentials=True,
-    allow_methods=["*"],         # Allow all HTTP methods
-    allow_headers=["*"],         # Allow all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
+# Custom middleware to always add CORS headers, even on errors
+@app.middleware("http")
+async def add_cors_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    response.headers["Access-Control-Allow-Methods"] = "*"
+    response.headers["Access-Control-Allow-Headers"] = "*"
+    return response
 
 @app.post("/set_param")
 async def set_param(request: Request):
@@ -54,4 +64,3 @@ async def set_param(request: Request):
             status_code=500,
             content={"success": False, "error": e.output.decode()}
         )
-

@@ -1,4 +1,4 @@
-const ros = new ROSLIB.Ros({ url: 'ws://localhost:9090' });
+const ros = new ROSLIB.Ros({ url: `ws://${SERVER_IP}:9090` });
 ros.on('connection', () => uiLog('✅ Connected to rosbridge'));
 ros.on('error', err => uiLog('❌ ROS connection error:', err));
 ros.on('close', () => uiLog('❌ ROS connection closed'));
@@ -16,7 +16,7 @@ function updateViewer(i) {
   const enabled = document.getElementById(`enableCam${i}`).checked;
   const topic = document.getElementById(`topic${i}`).value;
   const img = document.getElementById(`viewer${i}`);
-  img.src = enabled && topic ? `http://localhost:8080/stream?topic=${topic}` : "";
+  img.src = enabled && topic ? `http://${SERVER_IP}:8080/stream?topic=${topic}` : "";
   uiLog(`[updateViewer] viewer${i}: enabled=${enabled}, topic=${topic}, img.src=${img.src}`);
 }
 

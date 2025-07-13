@@ -26,7 +26,7 @@ function setCameraParam(camIndex, paramName, value, type = 'string') {
   };
   uiLog("[setCameraParam] Backend payload:", payload);
 
-  fetch("http://localhost:8001/set_param", {
+  fetch(`http://${SERVER_IP}:8001/set_param`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
