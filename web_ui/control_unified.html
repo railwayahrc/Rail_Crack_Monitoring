@@ -195,9 +195,15 @@ button {
         <h3>Rosbag Recording</h3>
         <div class="recording-status" id="rosbag-status">Status: <span class="idle">Idle</span></div>
         <div>
-          <label><b>Select Topics to Record:</b></label>
-          <div id="rosbag-topics" class="topic-checkbox-list">Loading...</div>
-        </div>
+  <label><b>Select Topics to Record:</b></label>
+  <div id="rosbag-selectall-container" style="margin:4px 0;">
+    <label>
+      <input type="checkbox" id="rosbag-selectall"> <b>Select All</b>
+    </label>
+  </div>
+  <div id="rosbag-topics" class="topic-checkbox-list">Loading...</div>
+</div>
+
         <div>
           <label>Destination Folder:</label>
           <input type="text" id="dest-path" value="~/Recordings">
@@ -658,6 +664,52 @@ function startRecording() {
 function stopRecording() {
   fetch('/stop_recording').then(r => uiLog("Recording stopped"));
 }
+
+function updateRosbagSelectAllCheckbox() {
+  // Update Select All checkbox to match all topics state
+  const selectAll = document.getElementById('rosbag-selectall');
+  const cbs = Array.from(document.querySelectorAll('#rosbag-topics input[type=checkbox]'));
+  if (cbs.length === 0) {
+    selectAll.checked = false;
+    selectAll.indeterminate = false;
+    return;
+  }
+  const checkedCount = cbs.filter(cb=>cb.checked).length;
+  selectAll.checked = checkedCount === cbs.length;
+  selectAll.indeterminate = checkedCount > 0 && checkedCount < cbs.length;
+}
+
+function populateRosbagTopics() {
+  ros.getTopics((topics) => {
+    const topicsDiv = document.getElementById('rosbag-topics');
+    topicsDiv.innerHTML = '';
+    topics.topics.forEach(topic => {
+      if (topic.startsWith('/rosout') || topic.startsWith('/parameter_events')) return;
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.value = topic;
+      cb.id = 'rosbag_cb_' + topic.replace(/\//g, '_');
+      cb.checked = false;
+      cb.addEventListener('change', updateRosbagSelectAllCheckbox);
+      topicsDiv.appendChild(cb);
+      topicsDiv.appendChild(document.createTextNode(' ' + topic));
+      topicsDiv.appendChild(document.createElement('br'));
+    });
+    if (topicsDiv.innerHTML === '') topicsDiv.textContent = 'No topics found.';
+    updateRosbagSelectAllCheckbox();
+    uiLog("[populateRosbagTopics] Topics:", topics.topics);
+  });
+}
+// Global handler for Select All
+document.addEventListener('DOMContentLoaded', function() {
+  const selectAll = document.getElementById('rosbag-selectall');
+  selectAll.addEventListener('change', function() {
+    const cbs = Array.from(document.querySelectorAll('#rosbag-topics input[type=checkbox]'));
+    cbs.forEach(cb => { cb.checked = selectAll.checked; });
+    updateRosbagSelectAllCheckbox();
+  });
+});
+
 </script>
 </body>
 </html>

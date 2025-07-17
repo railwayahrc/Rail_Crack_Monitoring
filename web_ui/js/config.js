@@ -1,2 +1,2 @@
 // config.js
-const SERVER_IP = "192.168.43.155"; // <-- Set your server IP here
+const SERVER_IP = "10.33.149.139"; // <-- Set your server IP here

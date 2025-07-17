@@ -16,7 +16,13 @@ class CameraWorker(threading.Thread):
         self.topic_name = topic_name
         self.device_path = f'/dev/video{device_id}'
 
+        # Create VideoCapture and set MJPEG, 1080p, 30fps
         self.cap = cv2.VideoCapture(device_id)
+        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))  # MJPEG format
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)                        # Width 1080p
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)                       # Height 1080p
+        self.cap.set(cv2.CAP_PROP_FPS, 30)                                  # Frame rate 30 fps
+
         self.publisher = self.node.create_publisher(Image, topic_name, 10)
         self.bridge = CvBridge()
         self.running = self.cap.isOpened()
@@ -24,7 +30,7 @@ class CameraWorker(threading.Thread):
         # Declare and retrieve camera-specific parameters
         self.ns = f'camera_{device_id}'
         self.node.declare_parameter(f'{self.ns}.exposure_mode', 'auto')  # or 'manual'
-        self.node.declare_parameter(f'{self.ns}.exposure_value', 157)    # default Arducam value
+        self.node.declare_parameter(f'{self.ns}.exposure_value', 157)   # default Arducam value
 
         # Initial exposure configuration
         self.configure_exposure(
@@ -39,7 +45,6 @@ class CameraWorker(threading.Thread):
         if not os.path.exists(self.device_path):
             self.node.get_logger().warn(f'{self.device_path} not found.')
             return
-
         try:
             if mode == 'manual':
                 subprocess.run(['v4l2-ctl', '-d', self.device_path, '-c', 'auto_exposure=1'], check=True)
@@ -52,7 +57,6 @@ class CameraWorker(threading.Thread):
             self.node.get_logger().error(f'Failed to set exposure for {self.device_path}: {e}')
 
     def on_parameter_change(self, params):
-        # Extract new parameter values from the callback arguments
         mode = None
         value = None
         updated = False
@@ -64,7 +68,6 @@ class CameraWorker(threading.Thread):
                 value = param.value
                 updated = True
 
-        # Use the most recent values: if not updated, use current
         if updated:
             if mode is None:
                 mode = self.node.get_parameter(f'{self.ns}.exposure_mode').get_parameter_value().string_value
@@ -76,13 +79,13 @@ class CameraWorker(threading.Thread):
             except Exception as e:
                 self.node.get_logger().error(f'Exposure reconfiguration failed: {e}')
                 return SetParametersResult(successful=False)
+
         return SetParametersResult(successful=True)
 
     def run(self):
         if not self.running:
             self.node.get_logger().warn(f'{self.device_path} failed to open.')
             return
-
         self.node.get_logger().info(f'Starting stream: {self.device_path} → {self.topic_name}')
         while rclpy.ok() and self.running:
             ret, frame = self.cap.read()
@@ -93,6 +96,7 @@ class CameraWorker(threading.Thread):
     def stop(self):
         self.running = False
         self.cap.release()
+
 
 class MultiCameraNode(Node):
     def __init__(self):
@@ -114,6 +118,7 @@ class MultiCameraNode(Node):
             worker.stop()
         super().destroy_node()
 
+
 def main(args=None):
     rclpy.init(args=args)
     node = MultiCameraNode()
@@ -124,6 +129,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
