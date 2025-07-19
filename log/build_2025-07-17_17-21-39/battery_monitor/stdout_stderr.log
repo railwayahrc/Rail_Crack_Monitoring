@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/battery_monitor/battery_monitor.egg-info/PKG-INFO
+writing dependency_links to ../../build/battery_monitor/battery_monitor.egg-info/dependency_links.txt
+writing entry points to ../../build/battery_monitor/battery_monitor.egg-info/entry_points.txt
+writing requirements to ../../build/battery_monitor/battery_monitor.egg-info/requires.txt
+writing top-level names to ../../build/battery_monitor/battery_monitor.egg-info/top_level.txt
+reading manifest file '../../build/battery_monitor/battery_monitor.egg-info/SOURCES.txt'
+writing manifest file '../../build/battery_monitor/battery_monitor.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages/battery_monitor-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/battery_monitor/battery_monitor.egg-info to /home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages/battery_monitor-0.0.0-py3.10.egg-info
+running install_scripts
+Installing battery_monitor script to /home/jyo/ros2_ws/install/battery_monitor/lib/battery_monitor
+writing list of installed files to '/home/jyo/ros2_ws/build/battery_monitor/install.log'

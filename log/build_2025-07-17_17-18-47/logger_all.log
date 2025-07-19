@@ -1,0 +1,599 @@
+[0.109s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.110s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f5e43741cf0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5e4385b100>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5e4385b100>>)
+[0.271s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.271s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.271s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.271s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.271s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.272s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.272s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jyo/ros2_ws'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(ArduinoCode) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extension 'ros'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extensions ['cmake', 'python']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extension 'cmake'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extension 'python'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extensions ['python_setup_py']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(parameters) by extension 'python_setup_py'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extensions ['colcon_meta']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extensions ['ros']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/battery_monitor) by extension 'ros'
+[0.287s] DEBUG:colcon.colcon_core.package_identification:Package 'src/battery_monitor' with type 'ros.ament_python' and name 'battery_monitor'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(src/cart_control) by extension 'ros'
+[0.289s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cart_control' with type 'ros.ament_python' and name 'cart_control'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extensions ['ignore', 'ignore_ament_install']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extension 'ignore'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extension 'ignore_ament_install'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extensions ['colcon_pkg']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extension 'colcon_pkg'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extensions ['colcon_meta']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extension 'colcon_meta'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extensions ['ros']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(src/daemon) by extension 'ros'
+[0.290s] DEBUG:colcon.colcon_core.package_identification:Package 'src/daemon' with type 'ros.ament_cmake' and name 'daemon'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore_ament_install'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['colcon_pkg']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'colcon_pkg'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['colcon_meta']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'colcon_meta'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ros']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ros'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['cmake', 'python']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'cmake'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'python'
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['python_setup_py']
+[0.290s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'python_setup_py'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extensions ['ros']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_pkg) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'src/multi_camera_pkg' with type 'ros.ament_python' and name 'multi_camera_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extensions ['colcon_meta']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extension 'colcon_meta'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extensions ['ros']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(src/multi_camera_publisher) by extension 'ros'
+[0.292s] DEBUG:colcon.colcon_core.package_identification:Package 'src/multi_camera_publisher' with type 'ros.ament_python' and name 'multi_camera_publisher'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'ignore_ament_install'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['colcon_pkg']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'colcon_pkg'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'ros'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['cmake', 'python']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'cmake'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'python'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['python_setup_py']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'python_setup_py'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extensions ['ignore', 'ignore_ament_install']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extension 'ignore'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extension 'ignore_ament_install'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extensions ['colcon_pkg']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extension 'colcon_pkg'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosbag_control) by extension 'ros'
+[0.294s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosbag_control' with type 'ros.ament_python' and name 'rosbag_control'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extensions ['ignore', 'ignore_ament_install']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extension 'ignore'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extension 'ignore_ament_install'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extensions ['colcon_pkg']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extension 'colcon_pkg'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extensions ['colcon_meta']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extension 'colcon_meta'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extensions ['ros']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(src/system_monitor) by extension 'ros'
+[0.295s] DEBUG:colcon.colcon_core.package_identification:Package 'src/system_monitor' with type 'ros.ament_python' and name 'system_monitor'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extension 'ros'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extensions ['cmake', 'python']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extension 'cmake'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extension 'python'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extensions ['python_setup_py']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ublox_config) by extension 'python_setup_py'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extension 'ignore_ament_install'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extensions ['colcon_pkg']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extension 'colcon_pkg'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extensions ['colcon_meta']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extension 'colcon_meta'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extensions ['ros']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extension 'ros'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extensions ['cmake', 'python']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extension 'cmake'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extension 'python'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extensions ['python_setup_py']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui) by extension 'python_setup_py'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extension 'ignore'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extension 'ignore_ament_install'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extensions ['colcon_pkg']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extension 'colcon_pkg'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extensions ['colcon_meta']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extension 'colcon_meta'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extensions ['ros']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extension 'ros'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extensions ['cmake', 'python']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extension 'cmake'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extension 'python'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extensions ['python_setup_py']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/__pycache__) by extension 'python_setup_py'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extension 'ros'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extensions ['cmake', 'python']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extension 'cmake'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extension 'python'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extensions ['python_setup_py']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/js) by extension 'python_setup_py'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extension 'ros'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extensions ['cmake', 'python']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extension 'cmake'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extension 'python'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extensions ['python_setup_py']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~) by extension 'python_setup_py'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extension 'ros'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extensions ['cmake', 'python']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extension 'cmake'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extension 'python'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extensions ['python_setup_py']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings) by extension 'python_setup_py'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extension 'ros'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extensions ['cmake', 'python']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extension 'cmake'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extension 'python'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extensions ['python_setup_py']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(web_ui/~/Recordings/bag.db3) by extension 'python_setup_py'
+[0.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.299s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.336s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.336s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.338s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/jyo/projects/ydlidar_ros2_ws/install
+[0.338s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/jyo/projects/ouster-ros-ws/install
+[0.339s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/jyo/ros2_ws/install
+[0.340s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 287 installed packages in /opt/ros/humble
+[0.341s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'cmake_target' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'cmake_clean_first' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'cmake_force_configure' from command line to 'False'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'ament_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'battery_monitor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.375s] DEBUG:colcon.colcon_core.verb:Building package 'battery_monitor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jyo/ros2_ws/build/battery_monitor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jyo/ros2_ws/install/battery_monitor', 'merge_install': False, 'path': '/home/jyo/ros2_ws/src/battery_monitor', 'symlink_install': False, 'test_result_base': None}
+[0.375s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'cart_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.376s] DEBUG:colcon.colcon_core.verb:Building package 'cart_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jyo/ros2_ws/build/cart_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jyo/ros2_ws/install/cart_control', 'merge_install': False, 'path': '/home/jyo/ros2_ws/src/cart_control', 'symlink_install': False, 'test_result_base': None}
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'cmake_clean_first' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'cmake_force_configure' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'ament_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'catkin_cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'daemon' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.376s] DEBUG:colcon.colcon_core.verb:Building package 'daemon' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jyo/ros2_ws/build/daemon', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jyo/ros2_ws/install/daemon', 'merge_install': False, 'path': '/home/jyo/ros2_ws/src/daemon', 'symlink_install': False, 'test_result_base': None}
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'cmake_args' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'cmake_target' from command line to 'None'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.376s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.377s] DEBUG:colcon.colcon_core.verb:Building package 'multi_camera_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jyo/ros2_ws/build/multi_camera_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jyo/ros2_ws/install/multi_camera_pkg', 'merge_install': False, 'path': '/home/jyo/ros2_ws/src/multi_camera_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'cmake_target' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'multi_camera_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.377s] DEBUG:colcon.colcon_core.verb:Building package 'multi_camera_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jyo/ros2_ws/build/multi_camera_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jyo/ros2_ws/install/multi_camera_publisher', 'merge_install': False, 'path': '/home/jyo/ros2_ws/src/multi_camera_publisher', 'symlink_install': False, 'test_result_base': None}
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'cmake_target' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'rosbag_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.378s] DEBUG:colcon.colcon_core.verb:Building package 'rosbag_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jyo/ros2_ws/build/rosbag_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jyo/ros2_ws/install/rosbag_control', 'merge_install': False, 'path': '/home/jyo/ros2_ws/src/rosbag_control', 'symlink_install': False, 'test_result_base': None}
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'cmake_target' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'cmake_clean_first' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'cmake_force_configure' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'ament_cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'system_monitor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.378s] DEBUG:colcon.colcon_core.verb:Building package 'system_monitor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jyo/ros2_ws/build/system_monitor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jyo/ros2_ws/install/system_monitor', 'merge_install': False, 'path': '/home/jyo/ros2_ws/src/system_monitor', 'symlink_install': False, 'test_result_base': None}
+[0.378s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.379s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.379s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jyo/ros2_ws/src/battery_monitor' with build type 'ament_python'
+[0.379s] Level 1:colcon.colcon_core.shell:create_environment_hook('battery_monitor', 'ament_prefix_path')
+[0.382s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/hook/ament_prefix_path.ps1'
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/hook/ament_prefix_path.dsv'
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/hook/ament_prefix_path.sh'
+[0.385s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.385s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.389s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jyo/ros2_ws/src/cart_control' with build type 'ament_python'
+[0.389s] Level 1:colcon.colcon_core.shell:create_environment_hook('cart_control', 'ament_prefix_path')
+[0.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/cart_control/share/cart_control/hook/ament_prefix_path.ps1'
+[0.390s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/cart_control/share/cart_control/hook/ament_prefix_path.dsv'
+[0.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/cart_control/share/cart_control/hook/ament_prefix_path.sh'
+[0.391s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.391s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.396s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jyo/ros2_ws/src/daemon' with build type 'ament_cmake'
+[0.396s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jyo/ros2_ws/src/daemon'
+[0.397s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.397s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.401s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jyo/ros2_ws/src/multi_camera_pkg' with build type 'ament_python'
+[0.402s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_camera_pkg', 'ament_prefix_path')
+[0.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/hook/ament_prefix_path.ps1'
+[0.402s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/hook/ament_prefix_path.dsv'
+[0.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/hook/ament_prefix_path.sh'
+[0.403s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.403s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.407s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jyo/ros2_ws/src/multi_camera_publisher' with build type 'ament_python'
+[0.407s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_camera_publisher', 'ament_prefix_path')
+[0.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/hook/ament_prefix_path.ps1'
+[0.408s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/hook/ament_prefix_path.dsv'
+[0.409s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/hook/ament_prefix_path.sh'
+[0.409s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.409s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.413s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jyo/ros2_ws/src/rosbag_control' with build type 'ament_python'
+[0.413s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbag_control', 'ament_prefix_path')
+[0.414s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/hook/ament_prefix_path.ps1'
+[0.414s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/hook/ament_prefix_path.dsv'
+[0.415s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/hook/ament_prefix_path.sh'
+[0.416s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.416s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.421s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jyo/ros2_ws/src/system_monitor' with build type 'ament_python'
+[0.421s] Level 1:colcon.colcon_core.shell:create_environment_hook('system_monitor', 'ament_prefix_path')
+[0.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/hook/ament_prefix_path.ps1'
+[0.422s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/hook/ament_prefix_path.dsv'
+[0.422s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/hook/ament_prefix_path.sh'
+[0.423s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.423s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.693s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jyo/ros2_ws/src/battery_monitor'
+[0.693s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.693s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.971s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'cart_control' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[0.971s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jyo/ros2_ws/src/cart_control'
+[0.972s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.972s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jyo/ros2_ws/build/daemon': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jyo/ros2_ws/install/system_monitor:/home/jyo/ros2_ws/install/rosbag_control:/home/jyo/ros2_ws/install/multi_camera_publisher:/home/jyo/ros2_ws/install/multi_camera_pkg:/home/jyo/ros2_ws/install/cart_control:/home/jyo/ros2_ws/install/battery_monitor:/opt/ros/humble /usr/bin/cmake --build /home/jyo/ros2_ws/build/daemon -- -j12 -l12
+[1.299s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jyo/ros2_ws/src/multi_camera_pkg'
+[1.299s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.299s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.589s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'multi_camera_publisher' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[1.590s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jyo/ros2_ws/src/multi_camera_publisher'
+[1.590s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.590s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.891s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jyo/ros2_ws/src/rosbag_control'
+[1.892s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.892s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.906s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jyo/ros2_ws/build/daemon' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jyo/ros2_ws/install/system_monitor:/home/jyo/ros2_ws/install/rosbag_control:/home/jyo/ros2_ws/install/multi_camera_publisher:/home/jyo/ros2_ws/install/multi_camera_pkg:/home/jyo/ros2_ws/install/cart_control:/home/jyo/ros2_ws/install/battery_monitor:/opt/ros/humble /usr/bin/cmake --build /home/jyo/ros2_ws/build/daemon -- -j12 -l12
+[1.922s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jyo/ros2_ws/build/daemon': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jyo/ros2_ws/install/system_monitor:/home/jyo/ros2_ws/install/rosbag_control:/home/jyo/ros2_ws/install/multi_camera_publisher:/home/jyo/ros2_ws/install/multi_camera_pkg:/home/jyo/ros2_ws/install/cart_control:/home/jyo/ros2_ws/install/battery_monitor:/opt/ros/humble /usr/bin/cmake --install /home/jyo/ros2_ws/build/daemon
+[2.248s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jyo/ros2_ws/src/system_monitor'
+[2.249s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.249s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.285s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(daemon)
+[2.287s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jyo/ros2_ws/build/daemon' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jyo/ros2_ws/install/system_monitor:/home/jyo/ros2_ws/install/rosbag_control:/home/jyo/ros2_ws/install/multi_camera_publisher:/home/jyo/ros2_ws/install/multi_camera_pkg:/home/jyo/ros2_ws/install/cart_control:/home/jyo/ros2_ws/install/battery_monitor:/opt/ros/humble /usr/bin/cmake --install /home/jyo/ros2_ws/build/daemon
+[2.289s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon' for CMake module files
+[2.290s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon' for CMake config files
+[2.290s] Level 1:colcon.colcon_core.shell:create_environment_hook('daemon', 'cmake_prefix_path')
+[2.291s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/daemon/share/daemon/hook/cmake_prefix_path.ps1'
+[2.291s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/daemon/share/daemon/hook/cmake_prefix_path.dsv'
+[2.292s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/daemon/share/daemon/hook/cmake_prefix_path.sh'
+[2.293s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/lib'
+[2.293s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/bin'
+[2.293s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/lib/pkgconfig/daemon.pc'
+[2.293s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/lib/python3.10/site-packages'
+[2.293s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/bin'
+[2.294s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/daemon/share/daemon/package.ps1'
+[2.295s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jyo/ros2_ws/install/daemon/share/daemon/package.dsv'
+[2.296s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/daemon/share/daemon/package.sh'
+[2.297s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/daemon/share/daemon/package.bash'
+[2.298s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/daemon/share/daemon/package.zsh'
+[2.299s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jyo/ros2_ws/install/daemon/share/colcon-core/packages/daemon)
+[2.300s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(daemon)
+[2.301s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon' for CMake module files
+[2.301s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon' for CMake config files
+[2.302s] Level 1:colcon.colcon_core.shell:create_environment_hook('daemon', 'cmake_prefix_path')
+[2.302s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/daemon/share/daemon/hook/cmake_prefix_path.ps1'
+[2.303s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/daemon/share/daemon/hook/cmake_prefix_path.dsv'
+[2.303s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/daemon/share/daemon/hook/cmake_prefix_path.sh'
+[2.304s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/lib'
+[2.304s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/bin'
+[2.304s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/lib/pkgconfig/daemon.pc'
+[2.304s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/lib/python3.10/site-packages'
+[2.305s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/daemon/bin'
+[2.305s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/daemon/share/daemon/package.ps1'
+[2.306s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jyo/ros2_ws/install/daemon/share/daemon/package.dsv'
+[2.307s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/daemon/share/daemon/package.sh'
+[2.308s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/daemon/share/daemon/package.bash'
+[2.309s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/daemon/share/daemon/package.zsh'
+[2.310s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jyo/ros2_ws/install/daemon/share/colcon-core/packages/daemon)
+[2.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jyo/ros2_ws/src/battery_monitor': PYTHONPATH=/home/jyo/ros2_ws/build/battery_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/battery_monitor build --build-base /home/jyo/ros2_ws/build/battery_monitor/build install --record /home/jyo/ros2_ws/build/battery_monitor/install.log --single-version-externally-managed install_data
+[2.849s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jyo/ros2_ws/src/multi_camera_publisher': PYTHONPATH=/home/jyo/ros2_ws/build/multi_camera_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/multi_camera_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/multi_camera_publisher build --build-base /home/jyo/ros2_ws/build/multi_camera_publisher/build install --record /home/jyo/ros2_ws/build/multi_camera_publisher/install.log --single-version-externally-managed install_data
+[2.895s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jyo/ros2_ws/src/cart_control': PYTHONPATH=/home/jyo/ros2_ws/build/cart_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/cart_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cart_control build --build-base /home/jyo/ros2_ws/build/cart_control/build install --record /home/jyo/ros2_ws/build/cart_control/install.log --single-version-externally-managed install_data
+[2.941s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jyo/ros2_ws/src/multi_camera_pkg': PYTHONPATH=/home/jyo/ros2_ws/build/multi_camera_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/multi_camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/multi_camera_pkg build --build-base /home/jyo/ros2_ws/build/multi_camera_pkg/build install --record /home/jyo/ros2_ws/build/multi_camera_pkg/install.log --single-version-externally-managed install_data
+[2.945s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jyo/ros2_ws/src/rosbag_control': PYTHONPATH=/home/jyo/ros2_ws/build/rosbag_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/rosbag_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rosbag_control build --build-base /home/jyo/ros2_ws/build/rosbag_control/build install --record /home/jyo/ros2_ws/build/rosbag_control/install.log --single-version-externally-managed install_data
+[2.998s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jyo/ros2_ws/src/system_monitor': PYTHONPATH=/home/jyo/ros2_ws/build/system_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/system_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/system_monitor build --build-base /home/jyo/ros2_ws/build/system_monitor/build install --record /home/jyo/ros2_ws/build/system_monitor/install.log --single-version-externally-managed install_data
+[3.321s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_publisher' for CMake module files
+[3.321s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jyo/ros2_ws/src/multi_camera_publisher' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/multi_camera_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/multi_camera_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/multi_camera_publisher build --build-base /home/jyo/ros2_ws/build/multi_camera_publisher/build install --record /home/jyo/ros2_ws/build/multi_camera_publisher/install.log --single-version-externally-managed install_data
+[3.323s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_publisher' for CMake config files
+[3.324s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_publisher/lib'
+[3.324s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_publisher/bin'
+[3.324s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_publisher/lib/pkgconfig/multi_camera_publisher.pc'
+[3.325s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_publisher/lib/python3.10/site-packages'
+[3.325s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_camera_publisher', 'pythonpath')
+[3.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/hook/pythonpath.ps1'
+[3.327s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/hook/pythonpath.dsv'
+[3.327s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/hook/pythonpath.sh'
+[3.329s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_publisher/bin'
+[3.329s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(multi_camera_publisher)
+[3.329s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/package.ps1'
+[3.330s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/package.dsv'
+[3.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/package.sh'
+[3.331s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/package.bash'
+[3.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/multi_camera_publisher/share/multi_camera_publisher/package.zsh'
+[3.333s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jyo/ros2_ws/install/multi_camera_publisher/share/colcon-core/packages/multi_camera_publisher)
+[3.334s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/cart_control' for CMake module files
+[3.335s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jyo/ros2_ws/src/cart_control' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/cart_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/cart_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cart_control build --build-base /home/jyo/ros2_ws/build/cart_control/build install --record /home/jyo/ros2_ws/build/cart_control/install.log --single-version-externally-managed install_data
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/cart_control' for CMake config files
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/cart_control/lib'
+[3.337s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/cart_control/bin'
+[3.337s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/cart_control/lib/pkgconfig/cart_control.pc'
+[3.337s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/cart_control/lib/python3.10/site-packages'
+[3.337s] Level 1:colcon.colcon_core.shell:create_environment_hook('cart_control', 'pythonpath')
+[3.337s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/cart_control/share/cart_control/hook/pythonpath.ps1'
+[3.338s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/cart_control/share/cart_control/hook/pythonpath.dsv'
+[3.339s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/cart_control/share/cart_control/hook/pythonpath.sh'
+[3.339s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/cart_control/bin'
+[3.339s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cart_control)
+[3.340s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/cart_control/share/cart_control/package.ps1'
+[3.340s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jyo/ros2_ws/install/cart_control/share/cart_control/package.dsv'
+[3.341s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/cart_control/share/cart_control/package.sh'
+[3.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/cart_control/share/cart_control/package.bash'
+[3.342s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/cart_control/share/cart_control/package.zsh'
+[3.343s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jyo/ros2_ws/install/cart_control/share/colcon-core/packages/cart_control)
+[3.359s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/battery_monitor' for CMake module files
+[3.360s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jyo/ros2_ws/src/battery_monitor' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/battery_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/battery_monitor build --build-base /home/jyo/ros2_ws/build/battery_monitor/build install --record /home/jyo/ros2_ws/build/battery_monitor/install.log --single-version-externally-managed install_data
+[3.360s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/battery_monitor' for CMake config files
+[3.361s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/battery_monitor/lib'
+[3.361s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/battery_monitor/bin'
+[3.361s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/battery_monitor/lib/pkgconfig/battery_monitor.pc'
+[3.362s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/battery_monitor/lib/python3.10/site-packages'
+[3.362s] Level 1:colcon.colcon_core.shell:create_environment_hook('battery_monitor', 'pythonpath')
+[3.362s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/hook/pythonpath.ps1'
+[3.363s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/hook/pythonpath.dsv'
+[3.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/hook/pythonpath.sh'
+[3.364s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/battery_monitor/bin'
+[3.364s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(battery_monitor)
+[3.365s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/package.ps1'
+[3.366s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/package.dsv'
+[3.366s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/package.sh'
+[3.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/package.bash'
+[3.368s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/battery_monitor/share/battery_monitor/package.zsh'
+[3.369s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jyo/ros2_ws/install/battery_monitor/share/colcon-core/packages/battery_monitor)
+[3.394s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_pkg' for CMake module files
+[3.395s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jyo/ros2_ws/src/multi_camera_pkg' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/multi_camera_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/multi_camera_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/multi_camera_pkg build --build-base /home/jyo/ros2_ws/build/multi_camera_pkg/build install --record /home/jyo/ros2_ws/build/multi_camera_pkg/install.log --single-version-externally-managed install_data
+[3.396s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_pkg' for CMake config files
+[3.396s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_pkg/lib'
+[3.396s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_pkg/bin'
+[3.397s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_pkg/lib/pkgconfig/multi_camera_pkg.pc'
+[3.397s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_pkg/lib/python3.10/site-packages'
+[3.397s] Level 1:colcon.colcon_core.shell:create_environment_hook('multi_camera_pkg', 'pythonpath')
+[3.397s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/hook/pythonpath.ps1'
+[3.398s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/hook/pythonpath.dsv'
+[3.399s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/hook/pythonpath.sh'
+[3.399s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/multi_camera_pkg/bin'
+[3.399s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(multi_camera_pkg)
+[3.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/package.ps1'
+[3.400s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/package.dsv'
+[3.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/package.sh'
+[3.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/package.bash'
+[3.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/multi_camera_pkg/share/multi_camera_pkg/package.zsh'
+[3.402s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jyo/ros2_ws/install/multi_camera_pkg/share/colcon-core/packages/multi_camera_pkg)
+[3.448s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/system_monitor' for CMake module files
+[3.449s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jyo/ros2_ws/src/system_monitor' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/system_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/system_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/system_monitor build --build-base /home/jyo/ros2_ws/build/system_monitor/build install --record /home/jyo/ros2_ws/build/system_monitor/install.log --single-version-externally-managed install_data
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/system_monitor' for CMake config files
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/system_monitor/lib'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/system_monitor/bin'
+[3.451s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/system_monitor/lib/pkgconfig/system_monitor.pc'
+[3.452s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/system_monitor/lib/python3.10/site-packages'
+[3.452s] Level 1:colcon.colcon_core.shell:create_environment_hook('system_monitor', 'pythonpath')
+[3.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/hook/pythonpath.ps1'
+[3.453s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/hook/pythonpath.dsv'
+[3.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/hook/pythonpath.sh'
+[3.455s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/system_monitor/bin'
+[3.455s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(system_monitor)
+[3.456s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/package.ps1'
+[3.457s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/package.dsv'
+[3.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/package.sh'
+[3.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/package.bash'
+[3.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/system_monitor/share/system_monitor/package.zsh'
+[3.459s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jyo/ros2_ws/install/system_monitor/share/colcon-core/packages/system_monitor)
+[3.461s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/rosbag_control' for CMake module files
+[3.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jyo/ros2_ws/src/rosbag_control' returned '0': PYTHONPATH=/home/jyo/ros2_ws/build/rosbag_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jyo/ros2_ws/install/rosbag_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rosbag_control build --build-base /home/jyo/ros2_ws/build/rosbag_control/build install --record /home/jyo/ros2_ws/build/rosbag_control/install.log --single-version-externally-managed install_data
+[3.462s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/rosbag_control' for CMake config files
+[3.462s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/rosbag_control/lib'
+[3.462s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/rosbag_control/bin'
+[3.462s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/rosbag_control/lib/pkgconfig/rosbag_control.pc'
+[3.463s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/rosbag_control/lib/python3.10/site-packages'
+[3.463s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosbag_control', 'pythonpath')
+[3.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/hook/pythonpath.ps1'
+[3.463s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/hook/pythonpath.dsv'
+[3.464s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/hook/pythonpath.sh'
+[3.464s] Level 1:colcon.colcon_core.environment:checking '/home/jyo/ros2_ws/install/rosbag_control/bin'
+[3.464s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosbag_control)
+[3.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/package.ps1'
+[3.465s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/package.dsv'
+[3.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/package.sh'
+[3.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/package.bash'
+[3.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/jyo/ros2_ws/install/rosbag_control/share/rosbag_control/package.zsh'
+[3.466s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jyo/ros2_ws/install/rosbag_control/share/colcon-core/packages/rosbag_control)
+[3.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.467s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.467s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.475s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.475s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.475s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.497s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.497s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jyo/ros2_ws/install/local_setup.ps1'
+[3.500s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jyo/ros2_ws/install/_local_setup_util_ps1.py'
+[3.503s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jyo/ros2_ws/install/setup.ps1'
+[3.506s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jyo/ros2_ws/install/local_setup.sh'
+[3.507s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jyo/ros2_ws/install/_local_setup_util_sh.py'
+[3.509s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jyo/ros2_ws/install/setup.sh'
+[3.511s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jyo/ros2_ws/install/local_setup.bash'
+[3.512s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jyo/ros2_ws/install/setup.bash'
+[3.515s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jyo/ros2_ws/install/local_setup.zsh'
+[3.516s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jyo/ros2_ws/install/setup.zsh'

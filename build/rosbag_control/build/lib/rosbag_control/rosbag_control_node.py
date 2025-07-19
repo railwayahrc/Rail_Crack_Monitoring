@@ -39,7 +39,7 @@ class RosbagControlNode(Node):
             bag_path = os.path.join(output_dir, filename)
             self.get_logger().info(f"Starting rosbag recording: {bag_path}, topics: {topics}")
             self.rosbag_process = subprocess.Popen(
-                ['ros2', 'bag', 'record', '-o', bag_path] + topics
+                ["ros2", "bag", "record", "-s", "mcap", "--max-cache-size", "10240", "-o", bag_path] + topics
             )
             self.recording = True
             self.current_topics = topics
@@ -66,4 +66,3 @@ def main(args=None):
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
-

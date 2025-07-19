@@ -1,6 +1,5 @@
-# ~/ros2_ws/src/rosbag_control/setup.py
-
 from setuptools import setup
+import os
 
 package_name = 'rosbag_control'
 
@@ -19,5 +18,11 @@ setup(
             'rosbag_control_node = rosbag_control.rosbag_control_node:main',
         ],
     },
+    data_files=[
+        # Marker file for the ament resource index
+        (f'share/ament_index/resource_index/packages', [f'resource/{package_name}']),
+        # Install package.xml
+        (f'share/{package_name}', ['package.xml']),
+    ],
 )
 

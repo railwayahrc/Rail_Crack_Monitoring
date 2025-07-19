@@ -1,3 +1,4 @@
+package.xml
 setup.cfg
 setup.py
 ../../build/rosbag_control/rosbag_control.egg-info/PKG-INFO
@@ -7,6 +8,7 @@ setup.py
 ../../build/rosbag_control/rosbag_control.egg-info/requires.txt
 ../../build/rosbag_control/rosbag_control.egg-info/top_level.txt
 ../../build/rosbag_control/rosbag_control.egg-info/zip-safe
+resource/rosbag_control
 rosbag_control/__init__.py
 rosbag_control/rosbag_control_node.py
 test/test_copyright.py
